@@ -6,7 +6,7 @@ const rateLimit = require('telegraf-ratelimit');
 const mongo = require('mongodb').MongoClient;
 const axios = require('axios')
 const { token , admins , curr} = require('./details')
-const mongo_url = "mongodb+srv://bot_v2:bot_v2@cluster0.kzreu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const mongo_url = "mongodb+srv://royalayush:royalayush@cluster0.p77fj.mongodb.net/NodeJSBot?retryWrites=true&w=majority"
 const bot = new Telegraf(token);
 
 //Scenes Register 
@@ -108,7 +108,7 @@ const botstart = async (ctx) =>{
                 db.collection('refer').insertOne({user:ctx.from.id,'invited':"None",'kid':true})
             }
         }
-        let text = "*🚧Share Your Contact Number To Verify Yourself\n\n*_⚠️We Will Not Share Your Personal Information To Someone_"
+        let text = "*🔺️ Share Your Contact Number To Verify Yourself\n\n*`⚠️We Will Not Share Your Personal Information To Someone`"
         bot.telegram.sendMessage(ctx.from.id,text,{parse_mode:'Markdown',reply_markup:{keyboard:[[{text:"📤 Send Contact",request_contact:true}]],resize_keyboard: true}})
     }catch(e){
         console.log(e)
@@ -337,7 +337,7 @@ bot.hears('📊 Statistics',async (ctx) =>{
             var final = payout[0].value
         }
         //
-        let text = "*📊Bot Live Status Here\n\n📤 Total Payouts: "+final.toFixed(3)+" "+curr+"\n\n🙇 Total Users: "+users.length+" Users\n\n✅ Made By *[EarningCamps.In](http://EarningCamps.In)"
+        let text = "*📊Bot Live Status Here\n\n📤 Total Payouts: "+final.toFixed(3)+" "+curr+"\n\n🙇 Total Users: "+users.length+" Users\n\n✅ Made By *[SHARP](https://t.me/SHARLISM)"
         ctx.replyWithMarkdown(text,{disable_web_page_preview:true})
     }catch(e){
         senderr(e)
@@ -540,7 +540,7 @@ bot.action('continue',async (ctx) =>{
         var finalBal = parseFloat(bal) - parseFloat(toWith)
         db.collection('info').updateOne({user:ctx.from.id},{$set:{'balance':finalBal}})
         /*var RandInt = Math.random()
-        var url =  "https://indiapp.in/Payment/?mob="+wallet+"&amo="+amo+"&com="+comment+"&Guid=b03c5f30-3d64-4f2c-9b95-1a9e320352dd&od="+RandInt+""
+        var url = 'https://full2sms.in/api/v1/disburse/paytm?mid='+mid+'&mkey='+mkey+'&guid='+swg+'&mobile='+wallet+'&amount='+amo.toString()+'&info='+comment;
         var res = await axios.post(url)
         if (res.data.status == "ACCEPTED"){
             var text = "*🟢 Withdraw Request Processed 🟢\n\n💰 Amount: "+toWith+" "+curr+" (Tax : %"+tax+")\n🗂️ Paytm Wallet: *`"+wallet+"`"
