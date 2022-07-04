@@ -73,7 +73,7 @@ mongo.connect(mongo_url, { useUnifiedTopology: true } , (err,client) =>{
 })
 //Just Main Menu Keyboard
 let mainkey = [
-    ['🔺️ Account',
+    ['🔺️ Account'],
     ['❤ Invite','📊 Statistics'],
     ['🗂️ Wallet','🔻 Withdraw']
 ]
