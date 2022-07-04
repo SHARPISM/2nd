@@ -73,9 +73,9 @@ mongo.connect(mongo_url, { useUnifiedTopology: true } , (err,client) =>{
 })
 //Just Main Menu Keyboard
 let mainkey = [
-    ['💰 Account','👫 Invite'],
-    ['📊 Statistics'],
-    ['🗂️ Wallet','💵 Withdraw']
+    ['🔺️ Account',
+    ['❤ Invite'],['📊 Statistics'],
+    ['🗂️ Wallet','🔻 Withdraw']
 ]
 
 const botstart = async (ctx) =>{
@@ -236,7 +236,7 @@ senderr(e)
 })
 
 //Account Info Button Code
-bot.hears('💰 Account' , async (ctx) =>{
+bot.hears('🔺️ Account' , async (ctx) =>{
     try{
         //bot.telegram.sendChatAction(ctx.from.id,'typing').catch((err) => console.log(err))
         let admin = await db.collection('admin').find({admin:'admin'}).toArray()
@@ -277,7 +277,7 @@ senderr(e)
 })
 
 //Invite Button Code
-bot.hears('👫 Invite', async (ctx)=>{
+bot.hears('❤ Invite', async (ctx)=>{
     try{
         //bot.telegram.sendChatAction(ctx.from.id,'typing').catch((err) => console.log(err))
         let admin = await db.collection('admin').find({admin:'admin'}).toArray()
@@ -405,7 +405,7 @@ getwallet.on('text', async (ctx) =>{
 })
 
 //Withdraw Button Code
-bot.hears('💵 Withdraw',async (ctx) =>{
+bot.hears('🔻 Withdraw',async (ctx) =>{
     try{
     //bot.telegram.sendChatAction(ctx.from.id,'typing').catch((err) => console.log(err))
     let admin = await db.collection('admin').find({admin:'admin'}).toArray()
