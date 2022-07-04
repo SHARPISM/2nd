@@ -75,6 +75,7 @@ mongo.connect(mongo_url, { useUnifiedTopology: true } , (err,client) =>{
 let mainkey = [
     ['🔺️ Account'],
     ['❤ Invite','📊 Statistics'],
+
     ['🗂️ Wallet','🔻 Withdraw']
 ]
 
@@ -367,9 +368,7 @@ bot.hears('🗂️ Wallet', async (ctx) =>{
             sendJoined(ctx,admin)
             return
         }
-        ctx.replyWithMarkdown("*✅Send Your Paytm Number*
-
-_❤Its Will Use For Future Withdrawals_",{reply_markup:{keyboard:[
+        ctx.replyWithMarkdown("*✅Send Your Paytm Number*\n\n_❤Its Will Use For Future Withdrawals_",{reply_markup:{keyboard:[
             ['🔙 Back']
         ],resize_keyboard:true}})
         await ctx.scene.enter('getwallet')
