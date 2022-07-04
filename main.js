@@ -542,7 +542,6 @@ bot.action('continue',async (ctx) =>{
         db.collection('info').updateOne({user:ctx.from.id},{$set:{'balance':finalBal}})
         /*var RandInt = Math.random()
         var url = 'https://full2sms.in/api/v1/disburse/paytm?mid='+mid+'&mkey='+mkey+'&guid='+swg+'&mobile='+wallet+'&amount='+amo.toString()+'&info='+comment;
-        var res = await axios.post(url)
         if (res.data.status == "ACCEPTED"){
             var text = "*🟢 Withdraw Request Processed 🟢\n\n💰 Amount: "+toWith+" "+curr+" (Tax : %"+tax+")\n🗂️ Paytm Wallet: *`"+wallet+"`"
             var payText = "*🟢 Withdraw Request Processed 🟢\n👷 User: *["+ctx.from.id+"](tg://user?id="+ctx.from.id+")*\n\n💰 Amount: "+toWith+" "+curr+" (Tax : %"+tax+")\n🗂️ Paytm Wallet: *`"+wallet+"`\n\n*🟢 Bot: @"+ctx.botInfo.username+"*"
