@@ -338,7 +338,7 @@ bot.hears('📊 Statistics',async (ctx) =>{
             var final = payout[0].value
         }
         //
-        let text = "*📊Bot Live Status Here\n\n📤 Total Payouts: "+final.toFixed(3)+" "+curr+"\n\n🙇 Total Users: "+users.length+" Users\n\n✅ Made By *[SHARP](https://t.me/SHARLISM)"
+        let text = "*📊Bot Live Status Here\n\n📤 Total Payouts: "+final.toFixed(3)+" "+curr+"\n\n🙇 Total Users: "+users.length+" Users\n\n✅ Made By *[SHARP](https://t.me/SHARpISM)"
         ctx.replyWithMarkdown(text,{disable_web_page_preview:true})
     }catch(e){
         senderr(e)
