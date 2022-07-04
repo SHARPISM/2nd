@@ -236,7 +236,7 @@ senderr(e)
 })
 
 //Account Info Button Code
-bot.hears('💰 Account' , async (ctx) =>{
+bot.hears('🔺️ Account' , async (ctx) =>{
     try{
         //bot.telegram.sendChatAction(ctx.from.id,'typing').catch((err) => console.log(err))
         let admin = await db.collection('admin').find({admin:'admin'}).toArray()
