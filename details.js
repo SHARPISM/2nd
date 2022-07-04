@@ -1,5 +1,17 @@
-module.exports = {
-    token: '5305943986:AAEYnxMFZcyQTGKrI02X80hApJQAY8IXO0M',
-    admins: [1714591763,1611269167],
-    curr:'INR'
+module.exports = {
+    token: '5160963204:AAFKgLmsrClKbPKuZH3mBuyXH-ySglV93M8',
+    admins: [1635788715],
+    curr:'INR',
+    keyb : 
+
+[
+    ['📔 Account'],
+
+    ['👫 Invite','🗂️ Wallet'],
+
+    
+
+    ['💵 Withdraw','📈 Status']
+
+]
 }
